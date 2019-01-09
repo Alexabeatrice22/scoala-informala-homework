@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
 .ideea
+.iml
 
 # Log file
 *.log
