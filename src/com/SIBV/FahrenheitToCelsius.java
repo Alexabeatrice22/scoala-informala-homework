@@ -4,23 +4,24 @@ import java.util.Scanner;
 
 public class FahrenheitToCelsius {
     public static void main(String[] args) {
-        double temperature;
+        double tmp;
         Scanner in = new Scanner(System.in);
         System.out.println("Enter temperature in Fahrenheit:");
-        temperature = in.nextDouble();
-        if (temperature < 95)
-            System.out.println("Your health is in danger!");
+        tmp = in.nextDouble();
+        if (tmp < 95)
+            System.out.println("This is your temperature: " + temperature(tmp)  + " Your health is in danger!");
         else  {
-            System.out.println("Your body temperature in Celsius: " + temperature);
+            System.out.println("Your body temperature in Celsius: " + temperature(tmp));
 
-            if (temperature > 37.5) {
-                System.out.println("You are ill!!");
+            if (temperature(tmp) > 37.7) {
+                System.out.println("This is your temperature: " + temperature(tmp) + " You are ill!!");
             }
         }
+
     }
 
     private  static double temperature (double temperature){
-        double celsius = ((temperature - 32)* 5 ) / 9;
+        double celsius = ((temperature - 32)* 5) / 9;
         return celsius;
     }
 }
