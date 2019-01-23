@@ -10,11 +10,14 @@ public class DataValidation {
         int h = s.nextInt();
         System.out.println("Enter the minutes: ");
         int m = s.nextInt();
-
-        if (h >= 0 && h <= 23 && m >= 0 && m <= 59) {
-            System.out.println("The time is  " + h + ":" + m + " now." );
+        if (correct(h, m)) {
+            System.out.println("The time is  " + h + ":" + m + " now.");
         } else {
             System.out.println("Incorrect time!");
         }
     }
+
+        private static boolean correct(int a, int b){
+            return (a >= 0 && a <= 23 && b>= 0 && b <= 59);
+        }
 }
