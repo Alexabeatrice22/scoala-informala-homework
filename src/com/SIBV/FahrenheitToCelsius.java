@@ -7,7 +7,7 @@ public class FahrenheitToCelsius {
         double temperature;
         Scanner in = new Scanner(System.in);
         System.out.println("Enter temperature in Fahrenheit:");
-        temperature = in.nextInt();
+        temperature = in.nextDouble();
         if (temperature < 95)
             System.out.println("Your health is in danger!");
         else  {
